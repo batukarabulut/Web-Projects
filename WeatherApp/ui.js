@@ -10,7 +10,7 @@ export const displayWeatherInfo = (data) => {
     const weatherInfo = document.createElement("div");
     weatherInfo.classList.add("weather-info");
 
-    const cityH2 =document.createElement("h2");
+    const cityH2 = document.createElement("h2");
     cityH2.classList.add("city");
     cityH2.textContent = data.name;
 
@@ -18,5 +18,7 @@ export const displayWeatherInfo = (data) => {
     weatherInfo.appendChild(cityH2);
     
     weatherCard.appendChild(weatherInfo);
+
+    currentWeather.appendChild(weatherCard);
 
 }

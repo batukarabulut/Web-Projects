@@ -2,7 +2,7 @@ import { displayWeatherInfo } from './ui.js';
 
 const searchBtn = document.getElementById("search-button");
 const inputCity = document.getElementById("search-input");
-const apiKey = "b033124784d72a48f3d2a992513af768"
+const apiKey = ""
 
 async function citySearch(){
     const city = inputCity.value.trim();
