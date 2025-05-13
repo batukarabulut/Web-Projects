@@ -21,32 +21,35 @@
     <main>
       <div class="current-weather" id="current-weather">
         <!-- Weather info will be inserted here -->
-        <div class="weather-card">
-          <div class="weather-info">
-            <h2 class="city">Istanbul</h2>
-            <div class="temp-container">
-              <span class="temp">25°C</span>
-              <div class="temp-details">
-                <p><i class="fas fa-temperature-high"></i> Max: <span class="temp-max">28°C</span></p>
-                <p><i class="fas fa-temperature-low"></i> Min: <span class="temp-min">22°C</span></p>
+       
+        <template id="weather-template">
+          <div class="weather-card">
+            <div class="weather-info">
+              <h2 class="city">CITY_NAME</h2>
+              <div class="temp-container">
+                <span class="temp">TEMPERATURE</span>
+                <div class="temp-details">
+                  <p class="temp-max"><i class="fas fa-temperature-high"></i> Max: <span class="max-value">MAX_TEMP</span></p>
+                  <p class="temp-min"><i class="fas fa-temperature-low"></i> Min: <span class="min-value">MIN_TEMP</span></p>
+                </div>
+              </div>
+              <div class="description">WEATHER_DESCRIPTION</div>
+              <div class="details">
+                <div class="detail-item">
+                  <i class="fas fa-thermometer-half"></i>
+                  <span>Feels like: <span class="feels-like">FEELS_LIKE</span></span>
+                </div>
+                <div class="detail-item">
+                  <i class="fas fa-tint"></i>
+                  <span>Humidity: <span class="humidity">HUMIDITY</span></span>
+                </div>
               </div>
             </div>
-            <div class="description">Partly Cloudy</div>
-            <div class="details">
-              <div class="detail-item">
-                <i class="fas fa-thermometer-half"></i>
-                <span>Feels like: <span class="feels-like">27°C</span></span>
-              </div>
-              <div class="detail-item">
-                <i class="fas fa-tint"></i>
-                <span>Humidity: <span class="humidity">65%</span></span>
-              </div>
+            <div class="weather-icon">
+              <img src="WEATHER_ICON_URL" alt="Weather icon">
             </div>
           </div>
-          <div class="weather-icon">
-            <img src="https://openweathermap.org/img/wn/02d@4x.png" alt="Weather icon">
-          </div>
-        </div>
+        </template> 
 
       </div>
       
