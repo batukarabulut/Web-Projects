@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Weather App</h1>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for a city...">
+        <button id="search-button"><i class="fas fa-search"></i></button>
+      </div>
+    </header>
+    
+    <main>
+      <div class="current-weather" id="current-weather">
+        <!-- Weather info will be inserted here -->
+        <div class="weather-card">
+          <div class="weather-info">
+            <h2 class="city">Istanbul</h2>
+            <div class="temp-container">
+              <span class="temp">25°C</span>
+              <div class="temp-details">
+                <p><i class="fas fa-temperature-high"></i> Max: <span class="temp-max">28°C</span></p>
+                <p><i class="fas fa-temperature-low"></i> Min: <span class="temp-min">22°C</span></p>
+              </div>
+            </div>
+            <div class="description">Partly Cloudy</div>
+            <div class="details">
+              <div class="detail-item">
+                <i class="fas fa-thermometer-half"></i>
+                <span>Feels like: <span class="feels-like">27°C</span></span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-tint"></i>
+                <span>Humidity: <span class="humidity">65%</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="weather-icon">
+            <img src="https://openweathermap.org/img/wn/02d@4x.png" alt="Weather icon">
+          </div>
+        </div>
+
+      </div>
+      
+      <div class="pinned-cities-container">
+        <h2>Pinned Cities</h2>
+        <div id="pinned-cities" class="pinned-cities">
+          <!-- Pinned cities will be inserted here -->
+        </div>
+      </div>
+    </main>
+    
+    <div id="error-message" class="error-message"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
