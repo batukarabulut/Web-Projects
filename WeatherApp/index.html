@@ -19,39 +19,39 @@
     </header>
     
     <main>
-      <div class="current-weather" id="current-weather">
+      <div class="current-weather" id="current-weather" >
         <!-- Weather info will be inserted here -->
-       
-        <template id="weather-template">
-          <div class="weather-card">
-            <div class="weather-info">
-              <h2 class="city">CITY_NAME</h2>
-              <div class="temp-container">
-                <span class="temp">TEMPERATURE</span>
-                <div class="temp-details">
-                  <span><i class="fas fa-temperature-high"></i> <p class="temp-max"> Max: <span class="max-value">MAX_TEMP</span></p></span>
-                  <span><i class="fas fa-temperature-low"></i> <p class="temp-min"> Min: <span class="min-value">MIN_TEMP</span></p></span>
-                </div>
-              </div>
-              <div class="description">WEATHER_DESCRIPTION</div>
-              <div class="details">
-                <div class="detail-item">
-                  <i class="fas fa-thermometer-half"></i>
-                  <span>Feels like: <span class="feels-like">FEELS_LIKE</span></span>
-                </div>
-                <div class="detail-item">
-                  <i class="fas fa-tint"></i>
-                  <span>Humidity: <span class="humidity">HUMIDITY</span></span>
-                </div>
+      </div>
+
+      <template id="weather-template">
+        <div class="weather-card">
+          <div class="weather-info">
+            <h2 class="city">CITY_NAME</h2>
+            <div class="temp-container">
+              <span class="temp">TEMPERATURE</span>
+              <div class="temp-details">
+                <span><i class="fas fa-temperature-high"></i> <p class="temp-max"> Max: <span class="max-value">MAX_TEMP</span></p></span>
+                <span><i class="fas fa-temperature-low"></i> <p class="temp-min"> Min: <span class="min-value">MIN_TEMP</span></p></span>
               </div>
             </div>
-            <div class="weather-icon">
-              <img src="WEATHER_ICON_URL" alt="Weather icon">
+            <div class="description">WEATHER_DESCRIPTION</div>
+            <div class="details">
+              <div class="detail-item">
+                <i class="fas fa-thermometer-half"></i>
+                <span>Feels like: <span class="feels-like">FEELS_LIKE</span></span>
+              </div>
+              <div class="detail-item">
+                <i class="fas fa-tint"></i>
+                <span>Humidity: <span class="humidity">HUMIDITY</span></span>
+              </div>
             </div>
           </div>
-        </template> 
-
-      </div>
+          <div class="weather-icon">
+            <img src="WEATHER_ICON_URL" alt="Weather icon">
+          </div>
+          <button class="pin-button"><i class="fas fa-thumbtack"></i></button>
+        </div>
+      </template>
       
       <div class="pinned-cities-container">
         <h2>Pinned Cities</h2>

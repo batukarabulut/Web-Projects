@@ -1,4 +1,4 @@
-import { displayWeatherInfo } from './ui.js';
+import { displayWeatherInfo, createWeatherCard  } from './ui.js';
 
 const searchBtn = document.getElementById("search-button");
 const inputCity = document.getElementById("search-input");
@@ -28,7 +28,6 @@ inputCity.addEventListener("keydown", (event) => {
 });
 
 searchBtn.addEventListener("click", citySearch);
-
 
 async function getWeatherData(city) {
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;

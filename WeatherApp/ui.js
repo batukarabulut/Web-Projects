@@ -1,8 +1,9 @@
 const currentWeather = document.getElementById("current-weather");
+const pinnedCities = document.getElementById("pinned-cities");
 
 const kelvinToCelsius = (kelvin) => Math.round(kelvin - 273.15);
 
-export const displayWeatherInfo = (data) => {
+export const createWeatherCard = (data) => {
     console.log(data);
 
     const template = document.getElementById("weather-template");
@@ -25,6 +26,36 @@ export const displayWeatherInfo = (data) => {
     clone.querySelector(".weather-icon img").src = iconUrl;
     clone.querySelector(".weather-icon img").alt = tempDesc; 
     
+    return clone;
+};
+
+export const displayWeatherInfo = (data) => {
+    const card = createWeatherCard(data);
+    
+    const pinButton = card.querySelector(".pin-button");
+    pinButton.addEventListener("click", () =>{
+        addPinnedCity(data);
+        currentWeather.innerHTML = "";
+        
+    });
+
     currentWeather.innerHTML = "";
-    currentWeather.appendChild(clone);
-}
+    currentWeather.appendChild(card);
+    currentWeather.classList.add("visible");
+};
+
+export const addPinnedCity = (data) => {
+    // Zaten pinlenmiş mi?
+    const cityAlreadyPinned = [...pinnedCities.children].some(card =>
+        card.querySelector(".city")?.textContent === data.name
+    );
+    if (cityAlreadyPinned) return;
+
+    const card = createWeatherCard(data);
+    
+    // Gerekirse "Pin" butonunu kaldır (zaten pinned)
+    const pinButton = card.querySelector(".pin-button");
+    if (pinButton) pinButton.remove();
+
+    pinnedCities.appendChild(card);
+};
